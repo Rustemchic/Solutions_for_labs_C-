@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+int main() {
+
+    int  sec ;
+    cin >> sec;
+    int hour= sec/3600;
+    int min = (sec- hour*3600)/60;
+    int sec1 = (sec- hour*3600- min*60);
+    cout << hour << ":" << min << ":" << sec1;
+    return 0;
+}
