@@ -1,0 +1,49 @@
+a
+#include <iostream>
+#include <conio.h>
+using namespace std;
+void swapByPointer(int* a, int* b) {
+    int temp = *a;
+    
+    *a = *b;   
+    *b = temp;   
+}
+
+int main() {
+    int x ;
+    int y ;
+cin >> x >> y;
+    swapByPointer(&x, &y);
+    cout << "Before swap (pointer): x = " << x << ", y = " << y << std::endl;
+    
+
+    cout << "After swap (pointer): x = " << x << ", y = " << y << std::endl;
+
+    return 0;
+}
+
+
+
+b
+#include <iostream>
+void swapByReference(int& a, int& b) {
+    int temp = a;
+    a = b;
+    b = temp;
+}
+
+int main() {
+    int x ;
+    int y ;
+
+    std::cin >> x >> y;
+int& z = x ;
+    int& w = y ;
+
+    std::cout << "Before swap (reference): x = " << x << ", y = " << y << std::endl;
+    swapByReference(z,w );
+
+    std::cout << "After swap (reference): x = " << x << ", y = " << y << std::endl;
+
+    return 0;
+}
